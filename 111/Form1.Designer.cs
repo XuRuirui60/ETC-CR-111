@@ -49,7 +49,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -64,34 +72,41 @@
             this.button7.TabIndex = 9;
             this.button7.Text = "Exit";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(159, 139);
+            this.button6.Location = new System.Drawing.Point(165, 125);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 33);
+            this.button6.Size = new System.Drawing.Size(95, 47);
             this.button6.TabIndex = 5;
             this.button6.Text = "Stop";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(58, 139);
+            this.button5.Location = new System.Drawing.Point(55, 125);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 33);
+            this.button5.Size = new System.Drawing.Size(95, 47);
             this.button5.TabIndex = 4;
             this.button5.Text = "Start";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox6.Location = new System.Drawing.Point(159, 35);
+            this.groupBox6.Controls.Add(this.panel6);
+            this.groupBox6.Controls.Add(this.panel5);
+            this.groupBox6.Controls.Add(this.panel4);
+            this.groupBox6.Location = new System.Drawing.Point(165, 35);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(144, 72);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "WE";
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // groupBox4
             // 
@@ -107,10 +122,14 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Traffic Light";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.PeachPuff;
+            this.groupBox5.Controls.Add(this.panel3);
+            this.groupBox5.Controls.Add(this.panel2);
+            this.groupBox5.Controls.Add(this.panel1);
             this.groupBox5.Location = new System.Drawing.Point(6, 35);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(144, 72);
@@ -120,30 +139,35 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(166, 90);
+            this.button4.Location = new System.Drawing.Point(175, 90);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(130, 36);
             this.button4.TabIndex = 5;
             this.button4.Text = "Read";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(166, 48);
+            this.button3.Location = new System.Drawing.Point(175, 48);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 36);
             this.button3.TabIndex = 4;
             this.button3.Text = "Write";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(10, 90);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(143, 36);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -152,6 +176,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(143, 36);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox3
             // 
@@ -161,9 +186,9 @@
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Font = new System.Drawing.Font("新細明體", 18F);
-            this.groupBox3.Location = new System.Drawing.Point(12, 185);
+            this.groupBox3.Location = new System.Drawing.Point(12, 186);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(310, 140);
+            this.groupBox3.Size = new System.Drawing.Size(322, 140);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Device Password";
@@ -171,6 +196,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label3
             // 
@@ -180,6 +206,7 @@
             this.label3.Size = new System.Drawing.Size(201, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "yyyy/M/d HH:mm:ss";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // groupBox2
             // 
@@ -214,21 +241,27 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(221, 34);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(230, 35);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 33);
+            this.button2.Size = new System.Drawing.Size(86, 33);
             this.button2.TabIndex = 2;
             this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(140, 34);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button1.Location = new System.Drawing.Point(140, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.Size = new System.Drawing.Size(86, 33);
             this.button1.TabIndex = 1;
             this.button1.Text = "Open";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -247,12 +280,60 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Font = new System.Drawing.Font("新細明體", 18F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 156);
+            this.groupBox1.Size = new System.Drawing.Size(322, 156);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Device Connect";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(6, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(40, 40);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(52, 26);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(40, 40);
+            this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(98, 26);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(40, 40);
+            this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(6, 27);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(40, 40);
+            this.panel4.TabIndex = 10;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(52, 27);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(40, 40);
+            this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(98, 26);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(40, 40);
+            this.panel6.TabIndex = 2;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // Form1
             // 
@@ -265,9 +346,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "111 學年度 工業類科學生技藝競賽 電腦修護職種 第二站 崗位號碼：01";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox6.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -300,6 +383,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
